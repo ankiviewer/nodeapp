@@ -5,8 +5,8 @@ const dbSetup = require('../test/setup.js');
 server.start((err) => {
   assert(!err, err);
 
-  if ((process.env.NODE_ENV || "").toUpperCase() === "TEST") {
-    console.log("loading test data...");
+  if ((process.env.NODE_ENV || '').toUpperCase() === 'TEST') {
+    console.log('loading test data...'); // eslint-disable-line 
     dbSetup()
       .then(() =>
         console.log('Test server running on ' + server.info.uri) // eslint-disable-line 
