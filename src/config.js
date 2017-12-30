@@ -6,7 +6,7 @@ const sqlite3 = require('sqlite3').verbose();
 const server = new Hapi.Server();
 server.connection({ port });
 
-const sqlitePath = process.env.ANKI_SQLITE_PATH || process.env.NODE_ENV == 'test';
+const sqlitePath = process.env.ANKI_SQLITE_PATH || process.env.NODE_ENV === 'test';
 
 if (!sqlitePath) {
   throw new Error('Missing $ANKI_SQLITE_PATH environment variable');
