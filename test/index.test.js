@@ -24,6 +24,15 @@ tape('getAllNotes', (t) => {
     })
 });
 
+tape('GET :: /ping', (t) => {
+  server.inject('/ping')
+    .then((res) => {
+      t.equal(res.statusCode, 200);
+      t.equal(res.payload, 'pong');
+      t.end();
+    });
+});
+
 tape('GET :: /collection', (t) => {
   server.inject('/collection')
     .then((res) => {

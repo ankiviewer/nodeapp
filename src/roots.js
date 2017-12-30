@@ -6,8 +6,8 @@ const handleErr = (err) => console.log('ERR: ', err); // eslint-disable-line
 const routes = (db) => [
   {
     method: 'get',
-    path: '/',
-    handler: (request, reply) => reply('hello world')
+    path: '/ping',
+    handler: (request, reply) => reply('pong')
   },
   {
     method: 'get',

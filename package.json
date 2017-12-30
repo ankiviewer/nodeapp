@@ -15,7 +15,7 @@
     "test:debug:watch": "nodemon -x 'npm run test:debug'",
     "lint": "eslint .",
     "lint:watch": "nodemon -x 'npm run lint'",
-    "cover": "NODE_ENV=test istanbul cover tape ./test/*.test.js",
+    "cover": "NODE_ENV=test istanbul cover tape ./test/*.test.js -x src/index.js -x src/config.js",
     "cover:watch": "nodemon -x 'npm run cover'"
   },
   "keywords": [],
