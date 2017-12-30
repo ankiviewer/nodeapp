@@ -49,6 +49,7 @@ const getAllNotes = (db, collection) => new Promise((resolve, reject) => {
       return;
     }
     resolve(
+      /* eslint-disable camelcase */
       notes.map((note) => {
         return {
           anki_note_id: note.anki_note_id,
@@ -60,6 +61,7 @@ const getAllNotes = (db, collection) => new Promise((resolve, reject) => {
           deck: collection.decks[note.did].name
         };
       })
+      /* eslint-enable camelcase */
     );
   });
 });
