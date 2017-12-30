@@ -1,7 +1,7 @@
 const getCollection = (db) => new Promise((resolve, reject) => {
   db.get(
-    'select models, decks, tags, mod from col',
-    (err, {models, decks, tags, mod}) => {
+    'select models, decks, tags, mod, crt from col',
+    (err, {models, decks, tags, mod, crt}) => {
       /* istanbul ignore if */
       if (err) {
         reject(err);
@@ -11,32 +11,31 @@ const getCollection = (db) => new Promise((resolve, reject) => {
         models: JSON.parse(models),
         decks: JSON.parse(decks),
         tags: JSON.parse(tags),
-        mod
+        mod,
+        crt
       });
     }
   );
 });
 
-const formatFlds = (flds, sfld) => {
-  const f = flds
-    .split('\u001f')
-    .filter((str) => {
-      return [sfld, ''].indexOf(str) === -1
-    })[0];
-
-  return f;
-}
-
-const getAllNotes = (db, collection) => new Promise((resolve, reject) => {
+const getNotes = (db) => new Promise((resolve, reject) => {
   db.all(
   `SELECT
-  notes.id AS anki_note_id,
+  cards.id AS cid,
+  notes.id AS nid,
+  cards.mod AS cmod,
+  notes.mod AS nmod,
   notes.mid AS mid,
   notes.tags AS tags,
   notes.flds AS flds,
   notes.sfld AS sfld,
   cards.did AS did,
-  notes.mod AS mod
+  cards.ord AS ord,
+  cards.type AS type,
+  cards.queue AS queue,
+  cards.due AS due,
+  cards.reps AS reps,
+  cards.lapses AS lapses
   FROM
   notes
   INNER JOIN cards
@@ -48,22 +47,8 @@ const getAllNotes = (db, collection) => new Promise((resolve, reject) => {
       reject(err);
       return;
     }
-    resolve(
-      /* eslint-disable camelcase */
-      notes.map((note) => {
-        return {
-          anki_note_id: note.anki_note_id,
-          model: collection.models[note.mid].name,
-          one: formatFlds(note.flds, note.sfld),
-          two: note.sfld,
-          tags: note.tags,
-          mod: note.mod,
-          deck: collection.decks[note.did].name
-        };
-      })
-      /* eslint-enable camelcase */
-    );
+    resolve(notes);
   });
 });
 
-module.exports = { getCollection, getAllNotes, formatFlds }
+module.exports = { getCollection, getNotes }

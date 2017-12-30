@@ -1,4 +1,4 @@
-const { getCollection, getAllNotes } = require('./helpers.js');
+const { getCollection, getNotes } = require('./helpers.js');
 
 /* istanbul ignore next */
 const handleErr = (err) => console.log('ERR: ', err); // eslint-disable-line
@@ -22,8 +22,7 @@ const routes = (db) => [
     method: 'get',
     path: '/notes',
     handler: (_request, reply) => {
-      getCollection(db)
-        .then((col) => getAllNotes(db, col))
+      getNotes(db)
         .then(reply)
         .catch(handleErr);
     }

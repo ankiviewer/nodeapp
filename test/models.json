@@ -1,67 +1,260 @@
 {
-  "mod": 0,
-  "models": {
-    "1234": {"name": "deen"},
-    "1235": {"name": "ende"},
-    "1236": {"name": "reverse"},
-    "7654": {"name": "thaidefault"}
-  },
-  "decks": {
-    "1": {"name": "Default"},
-    "123456": {"name": "DE"},
-    "654321": {"name": "Thai"}
-  },
-  "tags": {
-    "sentence": 0,
-    "marked": 0,
-    "duplicate": 0,
-    "verb": 0,
-    "to-restructure": 0,
-    "verified-by-vanessa": 0,
-    "leech": 0
-  },
-  "cards": [
-    {"did": 123456, "nid": 1, "mod": 0},
-    {"did": 123456, "nid": 2, "mod": 0},
-    {"did": 123456, "nid": 3, "mod": 0},
-    {"did": 654321, "nid": 4, "mod": 0}
-  ],
- "formattedNotes": [
-    {
-      "model": "deen",
-      "one": "gackern",
-      "two": "to cluck",
-      "tags": "leech verb",
-      "deck": "DE",
-      "mod": 1507832160,
-      "anki_note_id": 1
+  "collection": {
+    "crt": 1480996800,
+    "mod": 1514655628599,
+    "models": {
+      "1507832105615": {
+        "name": "Basic (and reversed card)",
+        "did": 1,
+        "flds": [
+          { "name": "Front", "ord": 0 },
+          { "name": "Back", "ord": 1 }
+        ],
+        "mod": 1507832120
+      },
+      "1482844395181": {
+        "name": "en_de",
+        "did": 1482060876072,
+        "flds": [
+          { "name": "English", "ord": 0 },
+          { "name": "German", "ord": 1 },
+          { "name": "Hint", "ord": 2 }
+        ],
+        "mod": 1498897458
+      },
+      "1482842770192": {
+        "name": "de_reverse",
+        "did": 1482060876072,
+        "flds": [
+          { "name": "German", "ord": 0 },
+          { "name": "English", "ord": 1 },
+          { "name": "Hint", "ord": 2 }
+        ],
+        "mod": 1514653350
+      },
+      "1502629924060": {
+        "name": "Cloze",
+        "did": 1,
+        "flds": [
+          { "name": "Text", "ord": 0 },
+          { "name": "Extra", "ord": 1 }
+        ],
+        "mod": 1502629944
+      },
+      "1482844263685": {
+        "name": "de_en",
+        "did": 1482060876072,
+        "flds": [
+          { "name": "German", "ord": 0 },
+          { "name": "English", "ord": 1 },
+          { "name": "Hint", "ord": 2 }
+        ],
+        "mod": 1503554742
+      },
+      "1498897408555": {
+        "name": "preposition_case",
+        "did": 1482060876072,
+        "flds": [
+          { "name": "Front", "ord": 0 },
+          { "name": "Back", "ord": 1 }
+        ],
+        "mod": 1507832118
+      }
     },
+    "decks": {
+      "1": {
+        "name": "Default",
+        "mod": 1482840611
+      },
+      "1482060876072": {
+        "name": "DE",
+        "mod": 1514645269
+      },
+      "1503955755113": {
+        "name": "Thai",
+        "mod": 1514645455
+      }
+    },
+    "tags": {
+      "sentence": 0,
+      "marked": 0,
+      "duplicate": 0,
+      "verb": 0,
+      "to-restructure": 0,
+      "verified-by-vanessa": 0,
+      "leech": 0
+    }
+  },
+  "notes": [
     {
-      "model": "deen",
-      "one": "hallo",
-      "two": "hello",
-      "deck": "DE",
+      "cid": 1506600429296,
+      "nid": 1506600417828,
+      "cmod": 1510927123,
+      "nmod": 1506600429,
+      "mid": 1482842770192,
       "tags": "",
-      "mod": 1507832160,
-      "anki_note_id": 2
+      "flds": "Unnützunuseful",
+      "sfld": "unuseful",
+      "did": 1482060876072,
+      "ord": 0,
+      "type": 2,
+      "queue": 2,
+      "due": 412,
+      "reps": 6,
+      "lapses": 0
     },
     {
-      "model": "ende",
-      "one": "der Salto",
-      "two": "the summersault",
-      "tags": "leech",
-      "deck": "DE",
-      "mod": 1507832160,
-      "anki_note_id": 3
-    },
-    {
-      "model": "thaidefault",
-      "one": "Chai",
-      "two": "yes",
-      "deck": "Thai",
+      "cid": 1506600429297,
+      "nid": 1506600417828,
+      "cmod": 1514058424,
+      "nmod": 1506600429,
+      "mid": 1482842770192,
       "tags": "",
-      "mod": 1507832160,
-      "anki_note_id": 4
+      "flds": "Unnützunuseful",
+      "sfld": "unuseful",
+      "did": 1482060876072,
+      "ord": 1,
+      "type": 2,
+      "queue": 2,
+      "due": 417,
+      "reps": 13,
+      "lapses": 2
+    },
+    {
+      "cid": 1506600538241,
+      "nid": 1506600526101,
+      "cmod": 1510071661,
+      "nmod": 1506600538,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "reizento irritate (skin)",
+      "sfld": "to irritate (skin)",
+      "did": 1482060876072,
+      "ord": 0,
+      "type": 2,
+      "queue": 2,
+      "due": 392,
+      "reps": 7,
+      "lapses": 0
+    },
+    {
+      "cid": 1506600538242,
+      "nid": 1506600526101,
+      "cmod": 1514507902,
+      "nmod": 1506600538,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "reizento irritate (skin)",
+      "sfld": "to irritate (skin)",
+      "did": 1482060876072,
+      "ord": 1,
+      "type": 2,
+      "queue": 2,
+      "due": 390,
+      "reps": 28,
+      "lapses": 5
+    },
+    {
+      "cid": 1506600547120,
+      "nid": 1506600538252,
+      "cmod": 1511668181,
+      "nmod": 1506600547,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "empfindlichsensitive",
+      "sfld": "sensitive",
+      "did": 1482060876072,
+      "ord": 0,
+      "type": 2,
+      "queue": 2,
+      "due": 400,
+      "reps": 11,
+      "lapses": 1
+    },
+    {
+      "cid": 1506600547121,
+      "nid": 1506600538252,
+      "cmod": 1513616525,
+      "nmod": 1506600547,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "empfindlichsensitive",
+      "sfld": "sensitive",
+      "did": 1482060876072,
+      "ord": 1,
+      "type": 2,
+      "queue": 2,
+      "due": 393,
+      "reps": 22,
+      "lapses": 3
+    },
+    {
+      "cid": 1512715815757,
+      "nid": 1512715798553,
+      "cmod": 1514331998,
+      "nmod": 1512715815,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "Die Einigungthe agreement",
+      "sfld": "the agreement",
+      "did": 1482060876072,
+      "ord": 0,
+      "type": 2,
+      "queue": 2,
+      "due": 415,
+      "reps": 3,
+      "lapses": 0
+    },
+    {
+      "cid": 1512715815760,
+      "nid": 1512715798553,
+      "cmod": 1514420948,
+      "nmod": 1512715815,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "Die Einigungthe agreement",
+      "sfld": "the agreement",
+      "did": 1482060876072,
+      "ord": 1,
+      "type": 2,
+      "queue": 2,
+      "due": 395,
+      "reps": 10,
+      "lapses": 2
+    },
+    {
+      "cid": 1513143174755,
+      "nid": 1513143152957,
+      "cmod": 1513946204,
+      "nmod": 1513143174,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "großzügiggenerous",
+      "sfld": "generous",
+      "did": 1482060876072,
+      "ord": 0,
+      "type": 2,
+      "queue": 2,
+      "due": 395,
+      "reps": 5,
+      "lapses": 0
+    },
+    {
+      "cid": 1513143174757,
+      "nid": 1513143152957,
+      "cmod": 1514507882,
+      "nmod": 1513143174,
+      "mid": 1482842770192,
+      "tags": "",
+      "flds": "großzügiggenerous",
+      "sfld": "generous",
+      "did": 1482060876072,
+      "ord": 1,
+      "type": 2,
+      "queue": 2,
+      "due": 396,
+      "reps": 8,
+      "lapses": 1
     }
   ]
 }
